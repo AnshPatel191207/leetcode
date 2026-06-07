@@ -1,0 +1,20 @@
+// Last updated: 07/06/2026, 20:06:04
+class Solution {
+public:
+    bool isBalanced(string num) {
+        int evenSum = 0;
+        int oddSum = 0;
+        
+        for (int i = 0; i < num.length(); i++) {
+            int digit = num[i] - '0';
+            
+            if (i % 2 == 0) {
+                evenSum = evenSum + digit;
+            } else {
+                oddSum = oddSum + digit;
+            }
+        }
+        
+        return evenSum == oddSum;
+    }
+};
