@@ -1,0 +1,2 @@
+-- Last updated: 05/08/2026, 11:14:58
+select employee_id from Employees where employee_id not in (select employee_id from Salaries) union select employee_id from Salaries where employee_id not in (select employee_id from Employees) order by employee_id;
