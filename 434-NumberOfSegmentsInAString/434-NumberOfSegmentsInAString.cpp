@@ -1,0 +1,16 @@
+// Last updated: 05/08/2026, 11:19:34
+class Solution {
+public:
+    int countSegments(string s) {
+        int segmentCount = 0;
+        
+        for (int i = 0; i < s.length(); i++) {
+            
+            if (s[i] != ' ' && (i == 0 || s[i - 1] == ' ')) {
+                segmentCount++;
+            }
+        }
+        
+        return segmentCount;
+    }
+};
